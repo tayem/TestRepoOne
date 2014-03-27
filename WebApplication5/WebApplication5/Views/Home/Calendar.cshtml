@@ -1,0 +1,77 @@
+﻿@model WebApplication5.Models.CalendarViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <style type="text/css">
+        body {
+            background-color: #DEDEDE;
+        }
+        div.title {
+            font: x-large Verdana, Arial, Helvetica, sans-serif;
+            text-align: center;
+            height: 40px;
+            background-color: white;
+            color: black;
+        }
+
+        div.footer {
+            font: small Verdana, Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        table {
+            font: 100% Verdana, Arial, Helvetica, sans-serif;
+            table-layout: fixed;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th {
+            padding: 0 0.5em;
+            text-align: center;
+            background-color: gray;
+            color: white;
+        }
+        td {
+            font-size: medium;
+            padding: 0.25em 0.25em;
+            width: 14%;
+            height: 80px;
+            text-align: left;
+            vertical-align: top;
+        }
+        .date {
+            font-size: large;
+            padding: 0.25em 0.25em;
+            text-align: left;
+            vertical-align: top;
+        }
+        .sun {
+            color: red;
+        }
+        th.month {
+            visibility: hidden;
+            display: none;
+        }
+    </style>
+</head>
+
+    
+<h2 style="text-align:center;">@Model.MonthName 2014</h2>
+<table border="1">
+    <tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th></tr>
+    <tr><td><span class="date">&nbsp;</span></td><td><span class="date">&nbsp;</span></td><td><span class="date">&nbsp;</span></td><td><span class="date">&nbsp;</span></td><td><span class="date">&nbsp;</span></td><td><span class="date">1</span></td><td><span class="date">2</span></td></tr>
+    <tr><td><span class="date">3</span></td><td><span class="date">4</span></td><td><span class="date">5</span></td><td><span class="date">6</span></td><td><span class="date">7</span></td><td><span class="date">8</span></td><td><span class="date">9</span></td></tr>
+    <tr><td><span class="date">10</span></td><td><span class="date">11</span></td><td><span class="date">12</span></td><td><span class="date">13</span></td><td><span class="date">14</span></td><td><span class="date">15</span></td><td><span class="date">16</span></td></tr>
+    <tr><td><span class="date">17</span></td><td><span class="date">18</span></td><td><span class="date">19</span></td><td><span class="date">20</span></td><td><span class="date">21</span></td><td><span class="date">22</span></td><td><span class="date">23</span></td></tr>
+    <tr><td><span class="date">24 <br /><a href="http://www.imdb.com/title/tt0087553/">The Killing Fields</a></span></td><td><span class="date">25</span></td><td><span class="date">26 <br /><a href="http://www.imdb.com/title/tt0087553/">The Killing Fields</a></span></td><td><span class="date">27</span></td><td><span class="date">28</span></td><td><span class="date">29</span></td><td><span class="date">30</span></td></tr>
+    <tr><td><span class="date">31</span></td><td><span class="date">&nbsp;</span></td><td><span class="date">&nbsp;</span></td><td><span class="date">&nbsp;</span></td><td><span class="date">&nbsp;</span></td><td><span class="date">&nbsp;</span></td><td><span class="date">&nbsp;</span></td></tr>
+</table>
+<h3>Meeting Dates as a List:</h3>
+<ul>
+    @foreach (var e in Model.Events)
+    {
+        <li>@e.Title - @e.When.ToString()</li>
+    }
+</ul>
