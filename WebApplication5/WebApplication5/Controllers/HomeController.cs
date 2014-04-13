@@ -41,36 +41,37 @@ namespace WebApplication5.Controllers
         public ActionResult Calendar()
         {
             ViewBag.Title = "Calendar";
-            var model = new CalendarViewModel(DateTime.Today.Month);
-            model.Events.Add(new CalendarEventViewModel() { Title = "The Killing Fields", When = new DateTime(2014, 3, 24) });
-            model.Events.Add(new CalendarEventViewModel() { Title = "The Killing Fields", When = new DateTime(2014, 3, 26) });
+
+            var model = new CalendarViewModel(DateTime.Today.Month, DateTime.Today.Year);
 
             GenerateCalendar(model);
+
+            model.Events.Add(new CalendarEventViewModel() { Title = "The Killing Fields", When = new DateTime(2014, 3, 24) });
+            model.Events.Add(new CalendarEventViewModel() { Title = "The Killing Fields", When = new DateTime(2014, 3, 26) });
 
             return View(model);
         }
 
-        private void GenerateCalendar(CalendarViewModel model)
+        private void GenerateCalendar(CalendarViewModel viewModel)
         {
             var curdate = 1;
-            var today = DateTime.Today;
-            var daysinmonth = DateTime.DaysInMonth(today.Year, today.Month);
-            var monthday1 = (int)(new DateTime(today.Year, today.Month, 1)).DayOfWeek;
+            var daysinmonth = DateTime.DaysInMonth(viewModel.Year, viewModel.Month);
+            var monthday1 = (int)(new DateTime(viewModel.Year, viewModel.Month, 1)).DayOfWeek;
             for (var week = 0; curdate <= daysinmonth; week++)
             {
                 for (var day = 0; day < 7; day++)
                 {
                     if (week == 0 && day < monthday1)
                     {
-                        model.DaysInMonth.Add(0);
+                        viewModel.DaysInMonth.Add(0);
                     }
                     else if (curdate > daysinmonth)
                     {
-                        model.DaysInMonth.Add(0);
+                        viewModel.DaysInMonth.Add(0);
                     }
                     else
                     {
-                        model.DaysInMonth.Add(curdate);
+                        viewModel.DaysInMonth.Add(curdate);
                         curdate++;
                     }
                 }

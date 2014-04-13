@@ -7,16 +7,19 @@ namespace WebApplication5.Models
 {
     public class CalendarViewModel
     {
-        public CalendarViewModel(int month)
+        public CalendarViewModel(int month, int year)
         {
-            Events = new List<CalendarEventViewModel>();
-            DaysInMonth = new List<int>();
             Month = month;
+            Year = year;
+            DaysInMonth = new List<int>();
+
+            Events = new List<CalendarEventViewModel>();
         }
 
-        public List<CalendarEventViewModel> Events { get; set; }
         public int Month { get; set; }
+        public int Year { get; set; }
         public List<int> DaysInMonth { get; set; }
+        public List<CalendarEventViewModel> Events { get; set; }
 
         public string MonthName
         {
