@@ -44,18 +44,38 @@ namespace WebApplication5.Controllers
             var model = new CalendarViewModel(DateTime.Today.Month);
             model.Events.Add(new CalendarEventViewModel() { Title = "The Killing Fields", When = new DateTime(2014, 3, 24) });
             model.Events.Add(new CalendarEventViewModel() { Title = "The Killing Fields", When = new DateTime(2014, 3, 26) });
-            var x = 1;
 
+            GenerateCalendar(model);
 
-            var t = (new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1)).DayOfWeek;
-            for (int i = 1; i <= 30; i++)
-            {
-                var day = (new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1)).DayOfWeek;
-
-            }
             return View(model);
         }
 
+        private void GenerateCalendar(CalendarViewModel model)
+        {
+            var curdate = 1;
+            var today = DateTime.Today;
+            var daysinmonth = DateTime.DaysInMonth(today.Year, today.Month);
+            var monthday1 = (int)(new DateTime(today.Year, today.Month, 1)).DayOfWeek;
+            for (var week = 0; curdate <= daysinmonth; week++)
+            {
+                for (var day = 0; day < 7; day++)
+                {
+                    if (week == 0 && day < monthday1)
+                    {
+                        model.DaysInMonth.Add(0);
+                    }
+                    else if (curdate > daysinmonth)
+                    {
+                        model.DaysInMonth.Add(0);
+                    }
+                    else
+                    {
+                        model.DaysInMonth.Add(curdate);
+                        curdate++;
+                    }
+                }
+            }
+        }
 
         public ActionResult Test1()
         {

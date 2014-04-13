@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,11 +10,13 @@ namespace WebApplication5.Models
         public CalendarViewModel(int month)
         {
             Events = new List<CalendarEventViewModel>();
+            DaysInMonth = new List<int>();
             Month = month;
         }
 
         public List<CalendarEventViewModel> Events { get; set; }
         public int Month { get; set; }
+        public List<int> DaysInMonth { get; set; }
 
         public string MonthName
         {
