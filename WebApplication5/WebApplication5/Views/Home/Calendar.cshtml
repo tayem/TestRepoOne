@@ -60,13 +60,34 @@
     
 <h2 style="text-align:center;">@Model.MonthName 2014</h2>
 <table border="1">
-    <tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th></tr>
-    <tr><td><span class="date">&nbsp;</span></td><td><span class="date">&nbsp;</span></td><td><span class="date">&nbsp;</span></td><td><span class="date">&nbsp;</span></td><td><span class="date">&nbsp;</span></td><td><span class="date">1</span></td><td><span class="date">2</span></td></tr>
-    <tr><td><span class="date">3</span></td><td><span class="date">4</span></td><td><span class="date">5</span></td><td><span class="date">6</span></td><td><span class="date">7</span></td><td><span class="date">8</span></td><td><span class="date">9</span></td></tr>
-    <tr><td><span class="date">10</span></td><td><span class="date">11</span></td><td><span class="date">12</span></td><td><span class="date">13</span></td><td><span class="date">14</span></td><td><span class="date">15</span></td><td><span class="date">16</span></td></tr>
-    <tr><td><span class="date">17</span></td><td><span class="date">18</span></td><td><span class="date">19</span></td><td><span class="date">20</span></td><td><span class="date">21</span></td><td><span class="date">22</span></td><td><span class="date">23</span></td></tr>
-    <tr><td><span class="date">24 <br /><a href="http://www.imdb.com/title/tt0087553/">The Killing Fields</a></span></td><td><span class="date">25</span></td><td><span class="date">26 <br /><a href="http://www.imdb.com/title/tt0087553/">The Killing Fields</a></span></td><td><span class="date">27</span></td><td><span class="date">28</span></td><td><span class="date">29</span></td><td><span class="date">30</span></td></tr>
-    <tr><td><span class="date">31</span></td><td><span class="date">&nbsp;</span></td><td><span class="date">&nbsp;</span></td><td><span class="date">&nbsp;</span></td><td><span class="date">&nbsp;</span></td><td><span class="date">&nbsp;</span></td><td><span class="date">&nbsp;</span></td></tr>
+    <tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>
+  @{
+      int curdate = 1;
+      DateTime today = DateTime.Today;
+      int daysinmonth = DateTime.DaysInMonth(today.Year, today.Month);
+      int monthday1 = (int)(new DateTime(today.Year, today.Month, 1)).DayOfWeek;
+      for (int week = 0; curdate <= daysinmonth; week++ )
+      {
+          <tr>
+              @for (int day = 0; day < 7; day++)
+              {
+                  if (week == 0 && day < monthday1)
+                  {
+                      <td><span class="date">&nbsp;</span></td>
+                  }
+                  else if (curdate>daysinmonth)
+                  {
+                      <td><span class="date">&nbsp;</span></td>
+                  }
+                  else
+                  {
+                      <td><span class="date">@curdate</span></td>
+                      curdate++;
+                  }
+              }
+          </tr>
+      }
+  }
 </table>
 <h3>Meeting Dates as a List:</h3>
 <ul>
