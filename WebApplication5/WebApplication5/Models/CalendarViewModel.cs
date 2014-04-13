@@ -55,10 +55,4 @@ namespace WebApplication5.Models
             }
         }
     }
-
-    public class CalendarEventViewModel
-    {
-        public string Title { get; set; }
-        public DateTime When { get; set; }
-    }
 }
