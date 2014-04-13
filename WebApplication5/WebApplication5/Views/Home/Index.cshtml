@@ -38,17 +38,17 @@
         <p>
            Head over to the Current Movie page to stay informed about the movie we are currently watching at the club, right now it's Red Cliff!
         </p>
-        <p><a class="btn btn-primary btn-large" href="/Home/About">Current Movie &raquo;</a></p>
+        <p><a class="btn btn-primary btn-large" href="@(Url.Action("About", "Home", null))">Current Movie &raquo;</a></p>
     </div>
     <div class="col-md-4">
         <h2 style="color:black;">Club Calendar</h2>
         <p>You can head to the club calendar to stay updated on our meeting dates and which movies will be played on them!</p>
-        <p><a class="btn btn-primary btn-large" href="/Home/Calendar">Club Calendar &raquo;</a></p>
+        <p><a class="btn btn-primary btn-large" href="@(Url.Action("Calendar", "Home", null))">Club Calendar &raquo;</a></p>
     </div>
     <div class="col-md-4">
         <h2 style="color:black;">Movie Discussion</h2>
         <p>Head to the Discussion Board to give your input on our current film, past films, and several movies to come. It's always cool to see what others have to say!</p>
-        <p><a class="btn btn-primary btn-large" href="http://go.microsoft.com/fwlink/?LinkId=301867">Discussion Board &raquo;</a></p>
+        <p><a class="btn btn-primary btn-large" href="/Forum">Discussion Board &raquo;</a></p>
     </div>
    
 </div>
