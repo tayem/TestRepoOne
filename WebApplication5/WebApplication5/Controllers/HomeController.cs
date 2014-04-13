@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -36,31 +36,54 @@ namespace WebApplication5.Controllers
             return View();
         }
 
-    
 
-       public ActionResult Calendar()
+
+        public ActionResult Calendar()
         {
             ViewBag.Title = "Calendar";
-            var model = new CalendarViewModel(DateTime.Today.Month);
-            model.Events.Add(new CalendarEventViewModel() {Title = "The Killing Fields", When = new DateTime(2014, 3, 24)});
-            model.Events.Add(new CalendarEventViewModel() { Title = "The Killing Fields", When = new DateTime(2014, 3, 26) });
-            var x = 1;
 
+            var model = new CalendarViewModel(DateTime.Today.Month, DateTime.Today.Year);
 
-            var t = (new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1)).DayOfWeek;
-                 for (int i = 1; i <= 30; i++ )
-                 {
-                     var day = (new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1)).DayOfWeek;
+            GenerateCalendar(model);
 
-                 }
-           return View(model);
+            model.Events.Add(new CalendarEventViewModel() { Title = "The Killing Fields", When = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 24, 12, 0, 0) });
+            model.Events.Add(new CalendarEventViewModel() { Title = "The Great Gatsby", When = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 26, 12, 0, 0) });
+
+            return View(model);
         }
-       public ActionResult Test1()
-       {
-           ViewBag.Message = "Your application description page.";
 
-           return View();
-       }
+        private void GenerateCalendar(CalendarViewModel viewModel)
+        {
+            var curdate = 1;
+            var daysinmonth = DateTime.DaysInMonth(viewModel.Year, viewModel.Month);
+            var monthday1 = (int)(new DateTime(viewModel.Year, viewModel.Month, 1)).DayOfWeek;
+            for (var week = 0; curdate <= daysinmonth; week++)
+            {
+                for (var day = 0; day < 7; day++)
+                {
+                    if (week == 0 && day < monthday1)
+                    {
+                        viewModel.DaysInMonth.Add(0);
+                    }
+                    else if (curdate > daysinmonth)
+                    {
+                        viewModel.DaysInMonth.Add(0);
+                    }
+                    else
+                    {
+                        viewModel.DaysInMonth.Add(curdate);
+                        curdate++;
+                    }
+                }
+            }
+        }
+
+        public ActionResult Test1()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
 
     }
 }
