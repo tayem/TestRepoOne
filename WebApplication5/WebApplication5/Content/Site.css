@@ -16,10 +16,7 @@ textarea {
     max-width: 280px;
 }
 /*Set my own color and styling for all navbars*/
-.navbar{
-    background-color:#676767;
-    color:#46e011;
-}
+
 
 /* styles for validation helpers */
 .field-validation-error {
