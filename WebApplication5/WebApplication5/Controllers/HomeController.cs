@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -36,31 +36,33 @@ namespace WebApplication5.Controllers
             return View();
         }
 
-    
 
-       public ActionResult Calendar()
+
+        public ActionResult Calendar()
         {
             ViewBag.Title = "Calendar";
             var model = new CalendarViewModel(DateTime.Today.Month);
-            model.Events.Add(new CalendarEventViewModel() {Title = "The Killing Fields", When = new DateTime(2014, 3, 24)});
+            model.Events.Add(new CalendarEventViewModel() { Title = "The Killing Fields", When = new DateTime(2014, 3, 24) });
             model.Events.Add(new CalendarEventViewModel() { Title = "The Killing Fields", When = new DateTime(2014, 3, 26) });
             var x = 1;
 
 
             var t = (new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1)).DayOfWeek;
-                 for (int i = 1; i <= 30; i++ )
-                 {
-                     var day = (new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1)).DayOfWeek;
+            for (int i = 1; i <= 30; i++)
+            {
+                var day = (new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1)).DayOfWeek;
 
-                 }
-           return View(model);
+            }
+            return View(model);
         }
-       public ActionResult Test1()
-       {
-           ViewBag.Message = "Your application description page.";
 
-           return View();
-       }
+
+        public ActionResult Test1()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
 
     }
 }
