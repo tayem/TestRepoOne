@@ -1,4 +1,5 @@
 @model WebApplication5.Models.CalendarViewModel
+@using WebApplication5.Models;
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -61,8 +62,9 @@
 <table border="1">
     <tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>
     @{
-    int calendarIndex = 0;
-    while (calendarIndex < @Model.DaysInMonth.Count)
+        int calendarIndex = 0;
+    }
+    @while (calendarIndex < @Model.DaysInMonth.Count)
     {
         <tr>
             @for (int dayNum = 1; dayNum <= 7; dayNum++)
@@ -73,13 +75,27 @@
                 }
                 else
                 {
-                    <td><span class="date">@Model.DaysInMonth[calendarIndex]</span></td>
+                    <td>
+                        <span class="date">@Model.DaysInMonth[calendarIndex]</span>
+
+                        @{
+                    var eventsToday = new List<CalendarEventViewModel>();
+                    var currentDate = new DateTime(Model.Year, Model.Month, @Model.DaysInMonth[calendarIndex]).Date;
+                        }
+                        @foreach (var evt in @Model.Events)
+                        {
+                            if (evt.When.Date == currentDate)
+                            {
+                                <br />
+                                <span>@evt.Title</span>
+                            }
+                        }
+                    </td>
                 }
                 calendarIndex++;
             }
         </tr>
     }
-}
 </table>
 <h3>Meeting Dates as a List:</h3>
 <ul>
