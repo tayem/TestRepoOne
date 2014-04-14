@@ -18,7 +18,6 @@ namespace WebApplication5.Controllers
         public ActionResult About()
         {
             ViewBag.Title = "Current Movie";
-            Films.Add(new CurrentFilmModel() { Title = ""});
             return View();
         }
         public ActionResult WebForm1()
