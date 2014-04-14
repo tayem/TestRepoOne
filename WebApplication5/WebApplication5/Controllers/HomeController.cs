@@ -18,8 +18,7 @@ namespace WebApplication5.Controllers
         public ActionResult About()
         {
             ViewBag.Title = "Current Movie";
-            ViewBag.Message = "Your application description page.";
-
+            Films.Add(new CurrentFilmModel() { Title = ""});
             return View();
         }
         public ActionResult WebForm1()
@@ -46,8 +45,8 @@ namespace WebApplication5.Controllers
 
             GenerateCalendar(model);
 
-            model.Events.Add(new CalendarEventViewModel() { Title = "The Killing Fields", When = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 24, 12, 0, 0) });
-            model.Events.Add(new CalendarEventViewModel() { Title = "The Great Gatsby", When = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 26, 12, 0, 0) });
+            model.Events.Add(new CalendarEventViewModel() { Title = "The Killing Fields", When = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 24, 12, 0, 0), Link = "http://www.imdb.com/title/tt0087553/" });
+            model.Events.Add(new CalendarEventViewModel() { Title = "The Great Gatsby", When = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 26, 12, 0, 0), Link = "http://www.imdb.com/title/tt1343092/" });
 
             return View(model);
         }

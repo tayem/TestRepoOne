@@ -9,5 +9,6 @@ namespace WebApplication5.Models
     {
         public string Title { get; set; }
         public DateTime When { get; set; }
+        public string Link { get; set; }
     }
 }
