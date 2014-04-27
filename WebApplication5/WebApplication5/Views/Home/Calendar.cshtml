@@ -87,7 +87,7 @@
                             if (evt.When.Date == currentDate)
                             {
                                 <br />
-                                <span><a href="@evt.Link"> @evt.Title</a></span>
+                                <span><a href="@evt.Film.Link"> @evt.Film.Title</a></span>
                             }
                         }
                     </td>
@@ -101,6 +101,6 @@
 <ul>
     @foreach (var e in Model.Events)
     {
-        <li>@e.Title - @e.When.ToString()</li>
+        <li>@e.Film.Title - @e.When.ToString()</li>
     }
 </ul>

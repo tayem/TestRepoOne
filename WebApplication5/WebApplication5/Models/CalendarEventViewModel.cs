@@ -7,9 +7,15 @@ namespace WebApplication5.Models
 {
     public class CalendarEventViewModel
     {
-        public string Title { get; set; }
+       
         public DateTime When { get; set; }
-        public string Link { get; set; }
+        public FilmViewModel Film { get; set; }
+        
+    }
+    public class FilmViewModel 
+    {
+        public string Title { get; set; }
         public string Image { get; set; }
+        public string Link { get; set; }
     }
 }

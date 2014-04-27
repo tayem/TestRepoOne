@@ -44,8 +44,25 @@ namespace WebApplication5.Controllers
 
             GenerateCalendar(model);
 
-            model.Events.Add(new CalendarEventViewModel() { Title = "The Killing Fields", When = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 24, 12, 0, 0), Link = "http://www.imdb.com/title/tt0087553/" });
-            model.Events.Add(new CalendarEventViewModel() { Title = "The Great Gatsby", When = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 26, 12, 0, 0), Link = "http://www.imdb.com/title/tt1343092/" });
+            model.Events.Add(new CalendarEventViewModel()
+            {
+                Film = new FilmViewModel
+                {
+                    Title = "The Killing Fields",
+                    Link = "http://www.imdb.com/title/tt0087553/",
+                },
+
+                When = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 24, 12, 0, 0),
+            });
+
+            model.Events.Add(new CalendarEventViewModel() { 
+                Film = new FilmViewModel
+                {
+                    Title = "The Great Gatsby",
+                    Link = "http://www.imdb.com/title/tt1343092/",
+
+                },
+                 When = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 26, 12, 0, 0),  });
 
             return View(model);
         }
