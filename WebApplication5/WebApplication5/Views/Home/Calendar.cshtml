@@ -58,7 +58,7 @@
     </style>
 </head>
 
-<h2 style="text-align:center;">@Model.MonthName 2014</h2>
+<h2 style="text-align: center; color: #900000;">@Model.MonthName 2014</h2>
 <table border="1">
     <tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>
     @{
@@ -101,6 +101,6 @@
 <ul>
     @foreach (var e in Model.Events)
     {
-        <li>@e.Film.Title - @e.When.ToString("yyy/MM/dd hh")</li>
+        <li>@e.Film.Title - @e.When.ToString("ddd hhtt dd/M/yyyy ")</li>
     }
 </ul>

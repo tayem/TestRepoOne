@@ -6,7 +6,7 @@
 <head>
     <style>
         h1 {
-           color:#900000;
+            color: #900000;
         }
         .title{
             color:#900000;
@@ -30,14 +30,14 @@
 <h1>@ViewBag.Title</h1>
 @if (Model == null)
 {
-   <p>We've shown our last film, hope to see you all next year!</p> 
+   <p style="font-size:20pt;">If you're seeing this, that means that we've shown our last movie! Thank you all for being a part of this great club and we hope to see you all next year!</p> 
 }
 else
 {
     
-    <a href="@Model.Film.Link"><img  class="img" align="left" src="/Content/killingfields.jpg" width="400" height="500" alt="Red cliff poster" /></a>
+    <a href="@Model.Film.Link"><img  class="img" align="left" src="@Model.Film.Image" width="400" height="600" alt="@Model.Film.Title" /></a>
 <div class="div">
-    <h3 class="div">Our current movie is <font color="red">@Model.Film.Title</font>,<br /> @Model.Film.Description <br /><a href="@Model.Film.Link" >Click here</a> to learn more.<br />
+    <h3 class="div">Our current movie is <font color="red">@Model.Film.Title</font>,<br /> @Model.Film.Description <br /><a href="@Model.Film.Link" target="_blank">Click here</a> to learn more.<br />
     <br />For more information on our meeting dates for this movie,<br /> <a href="/Home/Calendar">click here</a> to go to the Calendar page</h3>
 </div>
     

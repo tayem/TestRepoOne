@@ -42,3 +42,13 @@ input[type="checkbox"].input-validation-error {
 .validation-summary-valid {
     display: none;
 }
+.footer{
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
+hr.footer{
+    width: 5px;
+    color:black;
+    background-color:black;
+}
