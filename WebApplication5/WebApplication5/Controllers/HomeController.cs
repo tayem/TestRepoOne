@@ -15,7 +15,7 @@ namespace WebApplication5.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Film()
         {
             ViewBag.Title = "Current Movie";
             return View();
@@ -43,8 +43,14 @@ namespace WebApplication5.Controllers
             var model = new CalendarViewModel(DateTime.Today.Month, DateTime.Today.Year);
 
             GenerateCalendar(model);
+            model.Events = GetEventList();
+            return View(model);
+        }
 
-            model.Events.Add(new CalendarEventViewModel()
+        private static List<CalendarEventViewModel> GetEventList()
+        {
+            var films = new List<CalendarEventViewModel>();
+            films.Add(new CalendarEventViewModel()
             {
                 Film = new FilmViewModel
                 {
@@ -55,18 +61,19 @@ namespace WebApplication5.Controllers
                 When = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 24, 12, 0, 0),
             });
 
-            model.Events.Add(new CalendarEventViewModel() { 
+            films.Add(new CalendarEventViewModel()
+            {
                 Film = new FilmViewModel
                 {
                     Title = "The Great Gatsby",
                     Link = "http://www.imdb.com/title/tt1343092/",
 
                 },
-                 When = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 26, 12, 0, 0),  });
-
-            return View(model);
+                When = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 26, 12, 0, 0),
+            });
+            return films;
         }
-
+        
         private void GenerateCalendar(CalendarViewModel viewModel)
         {
             var curdate = 1;

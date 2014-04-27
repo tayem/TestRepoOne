@@ -12,10 +12,5 @@ namespace WebApplication5.Models
         public FilmViewModel Film { get; set; }
         
     }
-    public class FilmViewModel 
-    {
-        public string Title { get; set; }
-        public string Image { get; set; }
-        public string Link { get; set; }
-    }
+   
 }

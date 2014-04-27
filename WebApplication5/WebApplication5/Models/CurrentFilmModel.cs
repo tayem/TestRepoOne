@@ -9,7 +9,7 @@ namespace WebApplication5.Models
     {
         public CurrentFilmModel(string title)
         {
-            Films = new List<CurrentFilmModel>();
+            Films = new List<FilmViewModel>();
         }
 
         public CurrentFilmModel()
@@ -18,7 +18,7 @@ namespace WebApplication5.Models
         }
         public string Title { get; set; }
 
-        public List<CurrentFilmModel> Films { get; set; }
+        public List<FilmViewModel> Films { get; set; }
     }
 }
 
