@@ -101,6 +101,6 @@
 <ul>
     @foreach (var e in Model.Events)
     {
-        <li>@e.Film.Title - @e.When.ToString()</li>
+        <li>@e.Film.Title - @e.When.ToString("yyy/MM/dd hh")</li>
     }
 </ul>

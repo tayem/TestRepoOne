@@ -12,18 +12,24 @@ namespace WebApplication5.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+
+            var nextFilm = CurrFilm();
+            return View(nextFilm);
         }
 
         public ActionResult Film()
         {
             ViewBag.Title = "Current Movie";
-            var filmList =  GetEventList();
-            var date = DateTime.Today;
-            var candidates = filmList.Where(x => x.When >= date).OrderBy(x=> x.When);
-            var nextFilm = candidates.First();
+            var nextFilm = CurrFilm();
             return View(nextFilm);
-
+            
+        } 
+        private CalendarEventViewModel  CurrFilm(){
+            var filmList = GetEventList();
+            var date = DateTime.Today;
+            var candidates = filmList.Where(x => x.When >= date).OrderBy(x => x.When);
+            var nextFilm = candidates.FirstOrDefault();
+            return nextFilm;
         }
         public ActionResult WebForm1()
         {
@@ -76,7 +82,7 @@ namespace WebApplication5.Controllers
                     Link = "http://www.imdb.com/title/tt1343092/",
                     Description = "this is a temporary test statement.",
                 },
-                When = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 28, 12, 0, 0),
+                When = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 25, 12, 0, 0),
             });
             return films;
         }
