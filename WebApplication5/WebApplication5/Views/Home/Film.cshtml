@@ -1,6 +1,8 @@
-﻿@{
+﻿@model WebApplication5.Models.CalendarEventViewModel
+@{
     ViewBag.Title = "Current Movie";
 }
+
 <head>
     <style>
         h1 {
@@ -28,9 +30,9 @@
 <h1>@ViewBag.Title</h1>
 
 
-    <a href="http://www.imdb.com/title/tt0087553/"><img  class="img" align="left" src="/Content/killingfields.jpg" width="400" height="500" alt="Red cliff poster" /></a>
+    <a href="@Model.Film.Link"><img  class="img" align="left" src="/Content/killingfields.jpg" width="400" height="500" alt="Red cliff poster" /></a>
 <div class="div">
-    <h3 class="div">Our current movie is <font color="red">THeKilling Fields</font>,<br /> A powerful movie about the civil war<br />  in Cambodia from the eye of a journalist.<br /><a href="http://www.imdb.com/title/tt0087553/" >Click here</a> to learn more.<br />
+    <h3 class="div">Our current movie is <font color="red">@Model.Film.Title</font>,<br /> @Model.Film.Description <br /><a href="@Model.Film.Link" >Click here</a> to learn more.<br />
     <br />For more information on our meeting dates for this movie,<br /> <a href="/Home/Calendar">click here</a> to go to the Calendar page</h3>
 </div>
     
