@@ -83,6 +83,17 @@ namespace WebApplication5.Controllers
                 },
                 When = new DateTime(2014, 04, 30, 12, 0, 0),
             });
+            films.Add(new CalendarEventViewModel()
+            {
+                Film = new FilmViewModel
+                {
+                    Title = "Schindler's List",
+                    Link = "http://www.imdb.com/title/tt0108052/",
+                    Description = "A very powerful movie with an extremely important message about WWII and the situation in Germany.",
+                    Image = "http://www.cinemasterpieces.com/92010/listapr10.jpg",
+                },
+               When = new DateTime(2014, 05, 05, 12, 0, 0),
+            });
             return films;
         }
         
