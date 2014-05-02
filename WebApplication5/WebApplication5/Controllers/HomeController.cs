@@ -72,6 +72,7 @@ namespace WebApplication5.Controllers
                 },
                 When = new DateTime(2014, 04, 28, 12, 0, 0),
             });
+
             films.Add(new CalendarEventViewModel()
             {
                 Film = new FilmViewModel
@@ -83,6 +84,7 @@ namespace WebApplication5.Controllers
                 },
                 When = new DateTime(2014, 04, 30, 12, 0, 0),
             });
+
             films.Add(new CalendarEventViewModel()
             {
                 Film = new FilmViewModel
@@ -94,6 +96,7 @@ namespace WebApplication5.Controllers
                 },
                When = new DateTime(2014, 05, 05, 12, 0, 0),
             });
+
             return films;
         }
         
