@@ -94,7 +94,7 @@ namespace WebApplication5.Controllers
                     Description = "A very powerful movie with an extremely important message about WWII and the situation in Germany.",
                     Image = "http://www.cinemasterpieces.com/92010/listapr10.jpg",
                 },
-               When = new DateTime(2014, 05, 05, 12, 0, 0),
+               When = new DateTime(2014, 05, 06, 12, 0, 0),
             });
 
             films.Add(new CalendarEventViewModel()

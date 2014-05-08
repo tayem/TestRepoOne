@@ -101,7 +101,7 @@
 <ul>
     @foreach (var e in Model.Events)
     {
-        if (e.When.Date < DateTime.Today)
+        if (e.When.Date <= DateTime.Today)
         {
         <!--This is to ensure that meeting dates in the past are not shown.-->    
         }
