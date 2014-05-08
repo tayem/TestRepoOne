@@ -15,8 +15,10 @@
             margin-left: 2cm;
         }
         .div {
-            padding: 0px 0px 0px 30px;
+            position:relative;
+            left:  30px;
             text-align: center;
+            text-indent: 30px;
         }
         body {
             background-color: #DEDEDE;
@@ -35,7 +37,7 @@
 else
 {
     
-    <a href="@Model.Film.Link"><img  class="img" align="left" src="@Model.Film.Image" width="400" height="600" alt="@Model.Film.Title" /></a>
+    <a href="@Model.Film.Link"><img  class="img" align="left" src="@Model.Film.Image" width="400" height="660" alt="@Model.Film.Title" /></a>
 <div class="div">
     <h3 class="div">
         Our current movie is <font color="red">@Model.Film.Title</font>,<br /> @Model.Film.Description <br /><a href="@Model.Film.Link" target="_blank">Click here</a> to learn more.<br />
@@ -43,7 +45,7 @@ else
         <br />
         Here's a video of the trailer so you can get a preview of this awesome movie!
     </h3>
-    <iframe width="600" height="350" src="@Model.Film.Video" frameborder="0" ></iframe>
+    <iframe width="700" height="405" src="@Model.Film.Video" frameborder="0" ></iframe>
     
 </div>
     
