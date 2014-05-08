@@ -97,6 +97,72 @@ namespace WebApplication5.Controllers
                When = new DateTime(2014, 05, 05, 12, 0, 0),
             });
 
+            films.Add(new CalendarEventViewModel()
+            {
+                Film = new FilmViewModel
+                {
+                    Title = "Captain Phillips",
+                    Link = "http://www.imdb.com/title/tt1535109/",
+                    Description = "An interesting movie about a true story of Somalian Pirates boarding a container ship.",
+                    Image = "http://www.impawards.com/2013/posters/captain_phillips_ver2_xlg.jpg",
+                    Video = "https://www.youtube.com/embed/_3ASoBrFGlc?rel=0&fs=1",
+                },
+                When = new DateTime(2014, 05, 07, 12, 0, 0),
+            });
+
+
+            films.Add(new CalendarEventViewModel()
+            {
+                Film = new FilmViewModel
+                {
+                    Title = "Captain Phillips",
+                    Link = "http://www.imdb.com/title/tt1535109/",
+                    Description = "An interesting movie about a true story of Somalian Pirates boarding a container ship.",
+                    Image = "http://www.impawards.com/2013/posters/captain_phillips_ver2_xlg.jpg",
+                    Video = "https://www.youtube.com/embed/_3ASoBrFGlc?rel=0&fs=1",
+                },
+                When = new DateTime(2014, 05, 12, 12, 0, 0),
+            });
+
+            films.Add(new CalendarEventViewModel()
+            {
+                Film = new FilmViewModel
+                {
+                    Title = "Captain Phillips",
+                    Link = "http://www.imdb.com/title/tt1535109/",
+                    Description = "An interesting movie about a true story of Somalian Pirates boarding a container ship.",
+                    Image = "http://www.impawards.com/2013/posters/captain_phillips_ver2_xlg.jpg",
+                    Video = "https://www.youtube.com/embed/_3ASoBrFGlc?rel=0&fs=1",
+                },
+                When = new DateTime(2014, 05, 14, 12, 0, 0),
+            });
+
+            films.Add(new CalendarEventViewModel()
+            {
+                Film = new FilmViewModel
+                {
+                    Title = "Captain Phillips",
+                    Link = "http://www.imdb.com/title/tt1535109/",
+                    Description = "An interesting movie about a true story of Somalian Pirates boarding a container ship.",
+                    Image = "http://www.impawards.com/2013/posters/captain_phillips_ver2_xlg.jpg",
+                    Video = "https://www.youtube.com/embed/_3ASoBrFGlc?rel=0&fs=1",
+                },
+                When = new DateTime(2014, 05, 19, 12, 0, 0),
+            });
+
+            films.Add(new CalendarEventViewModel()
+            {
+                Film = new FilmViewModel
+                {
+                    Title = "Captain Phillips",
+                    Link = "http://www.imdb.com/title/tt1535109/",
+                    Description = "An interesting movie about a true story of Somalian Pirates boarding a container ship.",
+                    Image = "http://www.impawards.com/2013/posters/captain_phillips_ver2_xlg.jpg",
+                    Video = "https://www.youtube.com/embed/_3ASoBrFGlc?rel=0&fs=1",
+                },
+                When = new DateTime(2014, 05, 21, 12, 0, 0),
+            });
+
             return films;
         }
         

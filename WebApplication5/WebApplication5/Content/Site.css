@@ -45,7 +45,7 @@ input[type="checkbox"].input-validation-error {
 .footer{
     width: 100%;
     bottom: 0;
-    position: fixed;
+    position: static;
 }
 hr.footer{
     width: 5px;

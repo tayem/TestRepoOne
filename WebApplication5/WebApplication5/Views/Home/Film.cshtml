@@ -15,7 +15,7 @@
             margin-left: 2cm;
         }
         .div {
-            margin: 0px 0px 0px 20px;
+            padding: 0px 0px 0px 30px;
             text-align: center;
         }
         body {
@@ -37,8 +37,14 @@ else
     
     <a href="@Model.Film.Link"><img  class="img" align="left" src="@Model.Film.Image" width="400" height="600" alt="@Model.Film.Title" /></a>
 <div class="div">
-    <h3 class="div">Our current movie is <font color="red">@Model.Film.Title</font>,<br /> @Model.Film.Description <br /><a href="@Model.Film.Link" target="_blank">Click here</a> to learn more.<br />
-    <br />For more information on our meeting dates for this movie,<br /> <a href="/Home/Calendar">click here</a> to go to the Calendar page.</h3>
+    <h3 class="div">
+        Our current movie is <font color="red">@Model.Film.Title</font>,<br /> @Model.Film.Description <br /><a href="@Model.Film.Link" target="_blank">Click here</a> to learn more.<br />
+        <br />For more information on our meeting dates for this movie,<br /> <a href="/Home/Calendar">click here</a> to go to the Calendar page.
+        <br />
+        Here's a video of the trailer so you can get a preview of this awesome movie!
+    </h3>
+    <iframe width="600" height="350" src="@Model.Film.Video" frameborder="0" ></iframe>
+    
 </div>
     
 }

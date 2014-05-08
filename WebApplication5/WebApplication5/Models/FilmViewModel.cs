@@ -11,5 +11,6 @@ namespace WebApplication5.Models
         public string Image { get; set; }
         public string Link { get; set; }
         public string Description { get; set; }
+        public string Video { get; set; }
     }
 }
