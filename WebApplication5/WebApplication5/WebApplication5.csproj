@@ -39,91 +39,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ApplicationBoilerplate">
-      <HintPath>..\packages\MVCBootstrap.0.7.3.31109\lib\net40\ApplicationBoilerplate.dll</HintPath>
-    </Reference>
-    <Reference Include="CodeKicker.BBCode">
-      <HintPath>..\packages\MVCForum.1.3.8.40316\lib\net40\CodeKicker.BBCode.dll</HintPath>
-    </Reference>
-    <Reference Include="Commons.Web.Mvc.PrecompiledViews">
-      <HintPath>..\packages\MVCForum.1.3.8.40316\lib\net40\Commons.Web.Mvc.PrecompiledViews.dll</HintPath>
-    </Reference>
-    <Reference Include="CreativeMinds.BotScout">
-      <HintPath>..\packages\BotScout.Net.0.5.0\lib\net40\CreativeMinds.BotScout.dll</HintPath>
-    </Reference>
-    <Reference Include="CreativeMinds.Security">
-      <HintPath>..\packages\MVCForum.1.3.8.40316\lib\net40\CreativeMinds.Security.dll</HintPath>
-    </Reference>
-    <Reference Include="CreativeMinds.StopForumSpam">
-      <HintPath>..\packages\StopForumSpam.Net.0.5.0\lib\net40\CreativeMinds.StopForumSpam.dll</HintPath>
-    </Reference>
-    <Reference Include="HtmlAgilityPack">
-      <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net45\HtmlAgilityPack.dll</HintPath>
-    </Reference>
-    <Reference Include="ICSharpCode.SharpZipLib">
-      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
-    </Reference>
-    <Reference Include="Joel.Net.Akismet">
-      <HintPath>..\packages\MVCForum.1.3.8.40316\lib\net40\Joel.Net.Akismet.dll</HintPath>
-    </Reference>
-    <Reference Include="Lucene.Net">
-      <HintPath>..\packages\Lucene.Net.3.0.3\lib\NET40\Lucene.Net.dll</HintPath>
-    </Reference>
-    <Reference Include="markdownsharp">
-      <HintPath>..\packages\MVCForum.1.3.8.40316\lib\net40\markdownsharp.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="MVCBootstrap">
-      <HintPath>..\packages\MVCBootstrap.0.7.3.31109\lib\net40\MVCBootstrap.dll</HintPath>
-    </Reference>
-    <Reference Include="MVCBootstrap.EntityFramework">
-      <HintPath>..\packages\MVCBootstrap.0.7.3.31109\lib\net40\MVCBootstrap.EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="MVCBootstrap.Ninject">
-      <HintPath>..\packages\MVCBootstrap.0.7.3.31109\lib\net40\MVCBootstrap.Ninject.dll</HintPath>
-    </Reference>
-    <Reference Include="mvcForum.AddOns">
-      <HintPath>..\packages\MVCForum.1.3.8.40316\lib\net40\mvcForum.AddOns.dll</HintPath>
-    </Reference>
-    <Reference Include="mvcForum.Core">
-      <HintPath>..\packages\MVCForum.1.3.8.40316\lib\net40\mvcForum.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="mvcForum.DataProvider.EntityFramework">
-      <HintPath>..\packages\MVCForum.1.3.8.40316\lib\net40\mvcForum.DataProvider.EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="mvcForum.SearchProvider.Lucene">
-      <HintPath>..\packages\MVCForum.1.3.8.40316\lib\net40\mvcForum.SearchProvider.Lucene.dll</HintPath>
-    </Reference>
-    <Reference Include="mvcForum.Web">
-      <HintPath>..\packages\MVCForum.1.3.8.40316\lib\net40\mvcForum.Web.dll</HintPath>
-    </Reference>
-    <Reference Include="MVCThemes">
-      <HintPath>..\packages\MVCThemes.0.3.3\lib\net40\MVCThemes.dll</HintPath>
-    </Reference>
-    <Reference Include="Ninject">
-      <HintPath>..\packages\Ninject.3.0.1.10\lib\net45-full\Ninject.dll</HintPath>
-    </Reference>
-    <Reference Include="Ninject.Web.Common">
-      <HintPath>..\packages\Ninject.Web.Common.3.0.0.7\lib\net45-full\Ninject.Web.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Ninject.Web.Mvc">
-      <HintPath>..\packages\Ninject.MVC3.3.0.0.6\lib\net45-full\Ninject.Web.Mvc.dll</HintPath>
-    </Reference>
-    <Reference Include="RestSharp">
-      <HintPath>..\packages\MVCForum.1.3.8.40316\lib\net40\RestSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="SimpleAuthentication.Core">
-      <HintPath>..\packages\MVCForum.1.3.8.40316\lib\net40\SimpleAuthentication.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="SimpleAuthentication.Mvc">
-      <HintPath>..\packages\MVCForum.1.3.8.40316\lib\net40\SimpleAuthentication.Mvc.dll</HintPath>
-    </Reference>
-    <Reference Include="simplelocalisation">
-      <HintPath>..\packages\SimpleLocalisation.0.9.7\lib\net40\simplelocalisation.dll</HintPath>
-    </Reference>
-    <Reference Include="simplelocalisation.web">
-      <HintPath>..\packages\SimpleLocalisation.0.9.7\lib\net40\simplelocalisation.web.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -181,12 +97,6 @@
     <Reference Include="Newtonsoft.Json">
       <Private>True</Private>
       <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="WebActivator">
-      <HintPath>..\packages\WebActivator.1.5.3\lib\net40\WebActivator.dll</HintPath>
-    </Reference>
-    <Reference Include="WebActivatorEx">
-      <HintPath>..\packages\MVCForum.1.3.8.40316\lib\net40\WebActivatorEx.dll</HintPath>
     </Reference>
     <Reference Include="Antlr3.Runtime">
       <Private>True</Private>
@@ -266,52 +176,26 @@
     <Content Include="Content\banner.png" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\facebook.png" />
-    <Content Include="Content\google.png" />
     <Content Include="Content\Movie Posters\cap_phil.jpg" />
     <Content Include="Content\StyleSheet1.css" />
-    <Content Include="Content\twitter.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\boostrap-collapse.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Properties\PublishProfiles\Arvixe - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\common.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery-1.7.2.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\knockout-2.1.0.js" />
-    <Content Include="Scripts\knockout.validation.js" />
-    <Content Include="Scripts\markitup\jquery.markitup.js" />
-    <Content Include="Scripts\markitup\sets\bbcode\set.js" />
-    <Content Include="Scripts\markitup\sets\markdown\set.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Scripts\viewmodels\accessmaskupdate.js" />
-    <Content Include="Scripts\viewmodels\akismet.js" />
-    <Content Include="Scripts\viewmodels\basicinstall.js" />
-    <Content Include="Scripts\viewmodels\boardupdate.js" />
-    <Content Include="Scripts\viewmodels\categoryupdate.js" />
-    <Content Include="Scripts\viewmodels\forumupdate.js" />
-    <Content Include="Scripts\viewmodels\grouplist.js" />
-    <Content Include="Scripts\viewmodels\groupupdate.js" />
-    <Content Include="Scripts\viewmodels\multipost.js" />
-    <Content Include="Scripts\viewmodels\newusertrial.js" />
-    <Content Include="Scripts\viewmodels\statistics.js" />
-    <Content Include="Scripts\viewmodels\stopforumspam.js" />
-    <Content Include="Scripts\viewmodels\userlist.js" />
-    <Content Include="Scripts\viewmodels\userregistration.js" />
-    <Content Include="Scripts\viewmodels\userupdate.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
