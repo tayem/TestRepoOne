@@ -143,7 +143,7 @@ namespace WebApplication5.Controllers
                 {
                     Title = "Captain Phillips",
                     Link = "http://www.imdb.com/title/tt1535109/",
-                    Description = "An interesting movie about a true story of Somalian Pirates boarding a container ship.",
+                    Description = "an interesting movie about a true story of Somalian pirates boarding a container ship.",
                     Image = UrlHelper.GenerateContentUrl("~/Content/Movie Posters/cap_phil.jpg", this.HttpContext),
                     Video = "https://www.youtube.com/embed/_3ASoBrFGlc?rel=0&fs=1",
                 },
@@ -156,7 +156,7 @@ namespace WebApplication5.Controllers
                 {
                     Title = "Captain Phillips",
                     Link = "http://www.imdb.com/title/tt1535109/",
-                    Description = "An interesting movie about a true story of Somalian Pirates boarding a container ship.",
+                    Description = "an interesting movie about a true story of Somalian pirates boarding a container ship.",
                     Image = UrlHelper.GenerateContentUrl("~/Content/Movie Posters/cap_phil.jpg", this.HttpContext),
                     Video = "https://www.youtube.com/embed/_3ASoBrFGlc?rel=0&fs=1",
                 },

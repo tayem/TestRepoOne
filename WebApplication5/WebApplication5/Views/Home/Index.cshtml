@@ -39,7 +39,7 @@
         }
         else{
            <p>
-           Head over to the Current Movie page to stay informed about the movie we are currently watching at the club, right now it's @Model.Film.Title!
+           Head over to the Current Movie page to stay informed about the movie we are currently watching at the club, right now it's<span style="color:red;"> @Model.Film.Title!</span>
            </p>
         }
         <p><a class="btn btn-primary btn-large" href="@(Url.Action("Film", "Home", null))">Current Movie &raquo;</a></p>
@@ -52,7 +52,7 @@
     <div class="col-md-4">
         <h2 style="color:black;">Movie Discussion</h2>
         <p>Head to the Discussion Board to give your input on our current film, past films, and several movies to come. It's always cool to see what others have to say!</p>
-        <p><a class="btn btn-primary btn-large" href="/Forum">Discussion Board &raquo;</a></p>
+        <p><a class="btn btn-primary btn-large" href="/Forum">Forum &raquo;</a></p>
     </div>
    
 </div>
