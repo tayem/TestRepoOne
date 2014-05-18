@@ -11,8 +11,8 @@
             @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
             {
                 @Html.AntiForgeryToken()
-                <h4>Head over to the <a href="/Forum">Forum</a> page to make sure you're caught up on the conversations! You can create an account and login here but the Forum has moved to a new location, head there to find the best!</h4>
-                <h4>Use your HHMC account to log in:</h4>
+                <h4>Head over to the <a href="/Forum">Forum</a> page to make sure you're caught up on the conversations! You can create an account and login here but the Forum has moved to a new location, head there to find all the action!</h4>
+                <h4>Use your (old) HHMC account to log in:</h4>
                 <hr />
                 @Html.ValidationSummary(true)
                 <div class="form-group">

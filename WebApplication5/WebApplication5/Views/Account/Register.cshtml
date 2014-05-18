@@ -8,7 +8,8 @@
 @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
     @Html.AntiForgeryToken()
-    <h4>Create a new HHMC account to be able to contribute to the site.</h4>
+    <h4>Head over to the <a href="/Forum">Forum</a> page to make sure you're caught up on the conversations! You can create an account and login here but the Forum has moved to a new location, head there to find all the action!</h4>
+    <h4>Create an old-school HHMC account, because why not?</h4>
     <hr />
     @Html.ValidationSummary()
     <div class="form-group">
