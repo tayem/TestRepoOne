@@ -147,7 +147,7 @@ namespace WebApplication5.Controllers
                     Image = UrlHelper.GenerateContentUrl("~/Content/Movie Posters/cap_phil.jpg", this.HttpContext),
                     Video = "https://www.youtube.com/embed/_3ASoBrFGlc?rel=0&fs=1",
                 },
-                When = new DateTime(2014, 05, 19, 12, 0, 0),
+                When = new DateTime(2014, 05, 20, 12, 0, 0),
             });
 
             films.Add(new CalendarEventViewModel()
