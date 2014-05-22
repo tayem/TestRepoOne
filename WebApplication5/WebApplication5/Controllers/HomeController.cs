@@ -70,30 +70,6 @@ namespace WebApplication5.Controllers
                     Description = "A very powerful movie with an extremely important message about WWII and the situation in Germany.",
                     Image = "http://www.cinemasterpieces.com/92010/listapr10.jpg",
                 },
-                When = new DateTime(2014, 04, 28, 12, 0, 0),
-            });
-
-            films.Add(new CalendarEventViewModel()
-            {
-                Film = new FilmViewModel
-                {
-                    Title = "Schindler's List",
-                    Link = "http://www.imdb.com/title/tt0108052/",
-                    Description = "A very powerful movie with an extremely important message about WWII and the situation in Germany.",
-                    Image = "http://www.cinemasterpieces.com/92010/listapr10.jpg",
-                },
-                When = new DateTime(2014, 04, 30, 12, 0, 0),
-            });
-
-            films.Add(new CalendarEventViewModel()
-            {
-                Film = new FilmViewModel
-                {
-                    Title = "Schindler's List",
-                    Link = "http://www.imdb.com/title/tt0108052/",
-                    Description = "A very powerful movie with an extremely important message about WWII and the situation in Germany.",
-                    Image = "http://www.cinemasterpieces.com/92010/listapr10.jpg",
-                },
                When = new DateTime(2014, 05, 06, 12, 0, 0),
             });
 
@@ -161,6 +137,32 @@ namespace WebApplication5.Controllers
                     Video = "https://www.youtube.com/embed/_3ASoBrFGlc?rel=0&fs=1",
                 },
                 When = new DateTime(2014, 05, 21, 12, 0, 0),
+            });
+
+            films.Add(new CalendarEventViewModel()
+            {
+                Film = new FilmViewModel
+                {
+                    Title = "The Fifth Estate",
+                    Link = "http://www.imdb.com/title/tt1837703/",
+                    Description = "a thriller based on real events that show the corruptions and deceptions of power that turned the Internet into the most fierecely debated organization.",
+                    Image = UrlHelper.GenerateContentUrl("~/Content/Movie Posters/fif_est.jpg", this.HttpContext),
+                    Video = "https://www.youtube-nocookie.com/embed/ZT1wb8_tcYU?rel=0",
+                },
+                When = new DateTime(2014, 05, 26, 12, 0, 0),
+            });
+
+            films.Add(new CalendarEventViewModel()
+            {
+                Film = new FilmViewModel
+                {
+                    Title = "The Fifth Estate",
+                    Link = "http://www.imdb.com/title/tt1837703/",
+                    Description = "a thriller based on real events that show the corruptions and deceptions of power that turned the Internet into the most fierecely debated organization.",
+                    Image = UrlHelper.GenerateContentUrl("~/Content/Movie Posters/fif_est.jpg", this.HttpContext),
+                    Video = "https://www.youtube-nocookie.com/embed/ZT1wb8_tcYU?rel=0",
+                },
+                When = new DateTime(2014, 05, 28, 12, 0, 0),
             });
 
             return films;
