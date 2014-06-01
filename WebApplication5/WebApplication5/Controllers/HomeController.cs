@@ -165,6 +165,58 @@ namespace WebApplication5.Controllers
                 When = new DateTime(2014, 05, 28, 12, 0, 0),
             });
 
+            films.Add(new CalendarEventViewModel()
+            {
+                Film = new FilmViewModel
+                {
+                    Title = "The Fifth Estate",
+                    Link = "http://www.imdb.com/title/tt1837703/",
+                    Description = "a thriller based on real events that show the corruptions and deceptions of power that turned the Internet into the most fierecely debated organization.",
+                    Image = UrlHelper.GenerateContentUrl("~/Content/Movie Posters/fif_est.jpg", this.HttpContext),
+                    Video = "https://www.youtube-nocookie.com/embed/ZT1wb8_tcYU?rel=0",
+                },
+                When = new DateTime(2014, 06, 02, 12, 0, 0),
+            });
+
+            films.Add(new CalendarEventViewModel()
+            {
+                Film = new FilmViewModel
+                {
+                    Title = "The Fifth Estate",
+                    Link = "http://www.imdb.com/title/tt1837703/",
+                    Description = "a thriller based on real events that show the corruptions and deceptions of power that turned the Internet into the most fierecely debated organization.",
+                    Image = UrlHelper.GenerateContentUrl("~/Content/Movie Posters/fif_est.jpg", this.HttpContext),
+                    Video = "https://www.youtube-nocookie.com/embed/ZT1wb8_tcYU?rel=0",
+                },
+                When = new DateTime(2014, 06, 04, 12, 0, 0),
+            });
+
+            films.Add(new CalendarEventViewModel()
+            {
+                Film = new FilmViewModel
+                {
+                    Title = "The Fifth Estate",
+                    Link = "http://www.imdb.com/title/tt1837703/",
+                    Description = "a thriller based on real events that show the corruptions and deceptions of power that turned the Internet into the most fierecely debated organization.",
+                    Image = UrlHelper.GenerateContentUrl("~/Content/Movie Posters/fif_est.jpg", this.HttpContext),
+                    Video = "https://www.youtube-nocookie.com/embed/ZT1wb8_tcYU?rel=0",
+                },
+                When = new DateTime(2014, 06, 09, 12, 0, 0),
+            });
+
+            films.Add(new CalendarEventViewModel()
+            {
+                Film = new FilmViewModel
+                {
+                    Title = "The Fifth Estate",
+                    Link = "http://www.imdb.com/title/tt1837703/",
+                    Description = "a thriller based on real events that show the corruptions and deceptions of power that turned the Internet into the most fierecely debated organization.",
+                    Image = UrlHelper.GenerateContentUrl("~/Content/Movie Posters/fif_est.jpg", this.HttpContext),
+                    Video = "https://www.youtube-nocookie.com/embed/ZT1wb8_tcYU?rel=0",
+                },
+                When = new DateTime(2014, 06, 11, 12, 0, 0),
+            });
+
             return films;
         }
         
