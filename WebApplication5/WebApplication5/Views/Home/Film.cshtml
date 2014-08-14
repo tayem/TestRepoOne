@@ -11,9 +11,6 @@
         .title{
             color:#900000;
         }
-        h3{
-            margin-left: 2cm;
-        }
         .div {
             position:relative;
             left:  30px;
@@ -24,32 +21,30 @@
             background-color: #DEDEDE;
         }
         .img{
-            float:left;
-        }
-        iframe{
-            margin-left:30px;
-        }
-            
+            left:10px;
+        }   
     </style>
 </head>
-<h1>@ViewBag.Title</h1>
-@if (Model == null)
-{
-   <p style="font-size:20pt;">If you're seeing this, that means that we've shown our last movie! Thank you all for being a part of this great club and we hope to see you all next year!</p> 
-}
-else
-{
-    
-    <a href="@Model.Film.Link" target="_blank"> <img  class="img" align="left" src="@Model.Film.Image" width="410" height="660" alt="@Model.Film.Title" /> </a>
-<div class="div">
-    <h3 class="div">
-        Our current movie is <font color="red">@Model.Film.Title</font>,<br /> @Model.Film.Description <br /><a href="@Model.Film.Link" target="_blank">Click here</a> to learn more about the movie.<br />
-        <br />For more information on our meeting dates for this movie,<br /> <a href="/Home/Calendar">click here</a> to go to the Calendar page.
-        
-        Here's a video of the trailer so you can get a preview of this awesome movie!
-    </h3>
-    <iframe width="700" height="405" src="@Model.Film.Video" frameborder="0" ></iframe>
-    
-</div>
-    
-}
+<body>
+    <h1>@ViewBag.Title</h1>
+    @if (Model == null)
+    {
+        <p style="font-size:20pt;">If you're seeing this, that means that we've shown our last movie! Thank you all for being a part of this great club and we hope to see you all next year!</p>
+    }
+    else
+    {
+
+        <a href="@Model.Film.Link" target="_blank"> <img class="img" align="left" src="@Model.Film.Image" width="410" height="660" alt="@Model.Film.Title" /> </a>
+        <div class="img-responsive">
+            <h3 style="text-align:center;" class="img-responsive">
+                Our current movie is <font color="red">@Model.Film.Title</font>,<br /> @Model.Film.Description <br /><a href="@Model.Film.Link" target="_blank">Click here</a> to learn more about the movie.<br />
+                <br />For more information on our meeting dates for this movie,<br /> <a href="/Home/Calendar">click here</a> to go to the Calendar page.
+                Here's a video of the trailer so you can get a preview of this awesome movie!
+            </h3>
+            <br />
+            <iframe class="img-responsive1" width="700" height="385" src="@Model.Film.Video" frameborder="0"></iframe>
+
+        </div>
+
+    }
+</body>
