@@ -72,148 +72,86 @@ namespace WebApplication5.Controllers
                 },
                When = new DateTime(2014, 05, 06, 12, 0, 0),
             });
-
+            FilmViewModel capPhil = new FilmViewModel
+            {
+                Title = "Captain Phillips",
+                Link = "http://www.imdb.com/title/tt1535109/",
+                Description = "An interesting movie about a true story of Somalian Pirates boarding a container ship.",
+                Image = UrlHelper.GenerateContentUrl("~/Content/Movie Posters/cap_phil.jpg", this.HttpContext),
+                Video = "https://www.youtube.com/embed/_3ASoBrFGlc?rel=0&fs=1",
+            };
             films.Add(new CalendarEventViewModel()
             {
-                Film = new FilmViewModel
-                {
-                    Title = "Captain Phillips",
-                    Link = "http://www.imdb.com/title/tt1535109/",
-                    Description = "An interesting movie about a true story of Somalian Pirates boarding a container ship.",
-                    Image = UrlHelper.GenerateContentUrl("~/Content/Movie Posters/cap_phil.jpg", this.HttpContext),
-                    Video = "https://www.youtube.com/embed/_3ASoBrFGlc?rel=0&fs=1",
-                },
+                Film = capPhil,
                 When = new DateTime(2014, 05, 07, 12, 0, 0),
             });
 
-
             films.Add(new CalendarEventViewModel()
             {
-                Film = new FilmViewModel
-                {
-                    Title = "Captain Phillips",
-                    Link = "http://www.imdb.com/title/tt1535109/",
-                    Description = "An interesting movie about a true story of Somalian Pirates boarding a container ship.",
-                    Image = UrlHelper.GenerateContentUrl("~/Content/Movie Posters/cap_phil.jpg", this.HttpContext),
-                    Video = "https://www.youtube.com/embed/_3ASoBrFGlc?rel=0&fs=1",
-                },
+                Film = capPhil,
                 When = new DateTime(2014, 05, 12, 12, 0, 0),
             });
 
             films.Add(new CalendarEventViewModel()
             {
-                Film = new FilmViewModel
-                {
-                    Title = "Captain Phillips",
-                    Link = "http://www.imdb.com/title/tt1535109/",
-                    Description = "An interesting movie about a true story of Somalian Pirates boarding a container ship.",
-                    Image = UrlHelper.GenerateContentUrl("~/Content/Movie Posters/cap_phil.jpg", this.HttpContext),
-                    Video = "https://www.youtube.com/embed/_3ASoBrFGlc?rel=0&fs=1",
-                },
+                Film = capPhil,
                 When = new DateTime(2014, 05, 14, 12, 0, 0),
             });
 
             films.Add(new CalendarEventViewModel()
             {
-                Film = new FilmViewModel
-                {
-                    Title = "Captain Phillips",
-                    Link = "http://www.imdb.com/title/tt1535109/",
-                    Description = "an interesting movie about a true story of Somalian pirates boarding a container ship.",
-                    Image = UrlHelper.GenerateContentUrl("~/Content/Movie Posters/cap_phil.jpg", this.HttpContext),
-                    Video = "https://www.youtube.com/embed/_3ASoBrFGlc?rel=0&fs=1",
-                },
+                Film = capPhil,
                 When = new DateTime(2014, 05, 20, 12, 0, 0),
             });
 
             films.Add(new CalendarEventViewModel()
             {
-                Film = new FilmViewModel
-                {
-                    Title = "Captain Phillips",
-                    Link = "http://www.imdb.com/title/tt1535109/",
-                    Description = "an interesting movie about a true story of Somalian pirates boarding a container ship.",
-                    Image = UrlHelper.GenerateContentUrl("~/Content/Movie Posters/cap_phil.jpg", this.HttpContext),
-                    Video = "https://www.youtube.com/embed/_3ASoBrFGlc?rel=0&fs=1",
-                },
+                Film = capPhil,
                 When = new DateTime(2014, 05, 21, 12, 0, 0),
             });
+            FilmViewModel fifEstate = new FilmViewModel
+            {
 
+                Title = "The Fifth Estate",
+                Link = "http://www.imdb.com/title/tt1837703/",
+                Description = "a thriller based on real events that show the corruptions and deceptions of power that turned the Internet into the most fierecely debated organization.",
+                Image = UrlHelper.GenerateContentUrl("~/Content/Movie Posters/fif_est.jpg", this.HttpContext),
+                Video = "https://www.youtube-nocookie.com/embed/ZT1wb8_tcYU?rel=0",
+
+            };
             films.Add(new CalendarEventViewModel()
             {
-                Film = new FilmViewModel
-                {
-                    Title = "The Fifth Estate",
-                    Link = "http://www.imdb.com/title/tt1837703/",
-                    Description = "a thriller based on real events that show the corruptions and deceptions of power that turned the Internet into the most fierecely debated organization.",
-                    Image = UrlHelper.GenerateContentUrl("~/Content/Movie Posters/fif_est.jpg", this.HttpContext),
-                    Video = "https://www.youtube-nocookie.com/embed/ZT1wb8_tcYU?rel=0",
-                },
+                Film = fifEstate,
                 When = new DateTime(2014, 05, 26, 12, 0, 0),
             });
 
             films.Add(new CalendarEventViewModel()
             {
-                Film = new FilmViewModel
-                {
-                    Title = "The Fifth Estate",
-                    Link = "http://www.imdb.com/title/tt1837703/",
-                    Description = "a thriller based on real events that show the corruptions and deceptions of power that turned the Internet into the most fierecely debated organization.",
-                    Image = UrlHelper.GenerateContentUrl("~/Content/Movie Posters/fif_est.jpg", this.HttpContext),
-                    Video = "https://www.youtube-nocookie.com/embed/ZT1wb8_tcYU?rel=0",
-                },
+                Film = fifEstate,
                 When = new DateTime(2014, 05, 28, 12, 0, 0),
             });
 
             films.Add(new CalendarEventViewModel()
             {
-                Film = new FilmViewModel
-                {
-                    Title = "The Fifth Estate",
-                    Link = "http://www.imdb.com/title/tt1837703/",
-                    Description = "a thriller based on real events that show the corruptions and deceptions of power that turned the Internet into the most fierecely debated organization.",
-                    Image = UrlHelper.GenerateContentUrl("~/Content/Movie Posters/fif_est.jpg", this.HttpContext),
-                    Video = "https://www.youtube-nocookie.com/embed/ZT1wb8_tcYU?rel=0",
-                },
+                Film = fifEstate,
                 When = new DateTime(2014, 06, 02, 12, 0, 0),
             });
 
             films.Add(new CalendarEventViewModel()
             {
-                Film = new FilmViewModel
-                {
-                    Title = "The Fifth Estate",
-                    Link = "http://www.imdb.com/title/tt1837703/",
-                    Description = "a thriller based on real events that show the corruptions and deceptions of power that turned the Internet into the most fierecely debated organization.",
-                    Image = UrlHelper.GenerateContentUrl("~/Content/Movie Posters/fif_est.jpg", this.HttpContext),
-                    Video = "https://www.youtube-nocookie.com/embed/ZT1wb8_tcYU?rel=0",
-                },
+                Film = fifEstate,
                 When = new DateTime(2014, 06, 04, 12, 0, 0),
             });
 
             films.Add(new CalendarEventViewModel()
             {
-                Film = new FilmViewModel
-                {
-                    Title = "The Fifth Estate",
-                    Link = "http://www.imdb.com/title/tt1837703/",
-                    Description = "a thriller based on real events that show the corruptions and deceptions of power that turned the Internet into the most fierecely debated organization.",
-                    Image = UrlHelper.GenerateContentUrl("~/Content/Movie Posters/fif_est.jpg", this.HttpContext),
-                    Video = "https://www.youtube-nocookie.com/embed/ZT1wb8_tcYU?rel=0",
-                },
+                Film = fifEstate,
                 When = new DateTime(2014, 06, 09, 12, 0, 0),
             });
 
             films.Add(new CalendarEventViewModel()
             {
-                Film = new FilmViewModel
-                {
-                    Title = "The Fifth Estate",
-                    Link = "http://www.imdb.com/title/tt1837703/",
-                    Description = "a thriller based on real events that show the corruptions and deceptions of power that turned the Internet into the most fierecely debated organization.",
-                    Image = UrlHelper.GenerateContentUrl("~/Content/Movie Posters/fif_est.jpg", this.HttpContext),
-                    Video = "https://www.youtube-nocookie.com/embed/ZT1wb8_tcYU?rel=0",
-                },
+                Film = fifEstate,
                 When = new DateTime(2014, 06, 11, 12, 0, 0),
             });
 
