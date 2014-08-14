@@ -5,7 +5,8 @@
 <head>
     
 <link rel="stylesheet" type="text/css" href="/Content/bootstrap.css" />
-   <style>       body {
+   <style>       
+       body {
            background-color: #DEDEDE;
        }
        .jumbotron {
@@ -13,25 +14,19 @@
            text-align: center;
        }
        .naming {
-           margin-left: 1.6cm;
            color: #941212;
            font-size: medium;
        }
     
 </style>
-
 </head>
-<div class="jumbotron" style="background-image: url('/Content/banner.png'); background-repeat: no-repeat; background-size: 1140px 279px; ">
-<br />
-    <br />
-    <br />
-    <br />
-</div>
+<img class="img-responsive" src="~/Content/banner.png" alt="" />
+
 <div class="naming">
-    <h2 style="margin-left:32px;">The official web page of the Harry Ainlay Hollywood History Movie Club.</h2>
+    <h2 style="text-align:center">The official web page of the Harry Ainlay Hollywood History Movie Club.</h2>
 </div>
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4" style="text-align:center;">
         <h2 style="color:black;"> Current Movie </h2>
         @if (Model == null)
         {
@@ -42,17 +37,17 @@
            Head over to the Current Movie page to stay informed about the movie we are currently watching at the club, right now it's<span style="color:red;"> @Model.Film.Title!</span>
            </p>
         }
-        <p><a class="btn btn-primary btn-large" href="@(Url.Action("Film", "Home", null))">Current Movie &raquo;</a></p>
+        <a class="btn btn-primary btn-large" href="@(Url.Action("Film", "Home", null))">Current Movie &raquo;</a>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4" style="text-align:center;">
         <h2 style="color:black;">Club Calendar</h2>
         <p>You can head to the club calendar to stay updated on our meeting dates and which movies will be played on them!</p>
-        <p><a class="btn btn-primary btn-large" href="@(Url.Action("Calendar", "Home", null))">Club Calendar &raquo;</a></p>
+        <a class="btn btn-primary btn-large" href="@(Url.Action("Calendar", "Home", null))">Club Calendar &raquo;</a>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4" style="text-align:center;">
         <h2 style="color:black;">Movie Discussion</h2>
         <p>Head to the Discussion Board to give your input on our current film, past films, and several movies to come. It's always cool to see what others have to say!</p>
-        <p><a class="btn btn-primary btn-large" href="/Forum">Forum &raquo;</a></p>
+        <a class="btn btn-primary btn-large" href="/Forum">Forum &raquo;</a>
     </div>
    
 </div>
