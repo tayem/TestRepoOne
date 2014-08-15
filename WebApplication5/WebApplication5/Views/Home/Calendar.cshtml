@@ -1,6 +1,7 @@
 @model WebApplication5.Models.CalendarViewModel
 @using WebApplication5.Models;
-
+@using System;
+@using System.Linq;
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -55,10 +56,43 @@
             visibility: hidden;
             display: none;
         }
+        .none{
+            color: #900000;
+            text-align:center;
+        }
+          li.none1{
+            color: #900000;
+        }
     </style>
 </head>
 
-<h2 style="text-align: center; color: #900000; ">@Model.MonthName @DateTime.Today.Year</h2>
+@{ var test = Model.Events.Count - 1;
+   DateTime test1 = Model.Events[test].When;
+if (test1 <= DateTime.Today)
+    {
+        <h3 class="none">No Upcoming Meetings in</h3>
+    }
+
+{
+    <h3 class="none"> Upcoming Meeting Dates as a List:</h3>
+    <ul>
+        @foreach (var e in Model.Events)
+        {
+            if (e.When.Date <= DateTime.Today)
+            {
+        <!--This is to ensure that meeting dates in the past are not shown.-->
+            }
+            else
+            {
+                <li >@e.Film.Title - @e.When.ToString("ddd hhtt dd/M/yyyy ")</li>
+            }
+
+        }
+
+    </ul>
+}
+}
+<h2 style="text-align: center; color: #900000; text-decoration: underline; ">@Model.MonthName @DateTime.Today.Year</h2>
 <table border="1">
     <tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>
     @{
@@ -97,19 +131,3 @@
         </tr>
     }
 </table>
-<h3> Upcoming Meeting Dates as a List:</h3>
-<ul>
-    @foreach (var e in Model.Events)
-    {
-        if (e.When.Date <= DateTime.Today)
-        {
-        <!--This is to ensure that meeting dates in the past are not shown.-->    
-        }
-        else 
-        { 
-        <li>@e.Film.Title - @e.When.ToString("ddd hhtt dd/M/yyyy ")</li>
-        }
-    
-    }
-    
-</ul>

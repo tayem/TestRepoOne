@@ -52,9 +52,10 @@ namespace WebApplication5.Controllers
             ViewBag.Title = "Calendar";
 
             var model = new CalendarViewModel(DateTime.Today.Month, DateTime.Today.Year);
-
+            
             GenerateCalendar(model);
             model.Events = GetEventList();
+            
             return View(model);
         }
 
@@ -155,6 +156,11 @@ namespace WebApplication5.Controllers
                 When = new DateTime(2014, 06, 11, 12, 0, 0),
             });
 
+            films.Add(new CalendarEventViewModel()
+            {
+                Film = fifEstate,
+                When = new DateTime(2014, 08, 15, 12, 0, 0),
+            });
             return films;
         }
         
@@ -183,7 +189,7 @@ namespace WebApplication5.Controllers
                 }
             }
         }
-
+        
         public ActionResult Test1()
         {
             ViewBag.Message = "Your application description page.";
@@ -192,4 +198,5 @@ namespace WebApplication5.Controllers
         }
 
     }
+    
 }
