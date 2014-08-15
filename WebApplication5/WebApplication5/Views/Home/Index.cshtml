@@ -17,7 +17,13 @@
            color: #941212;
            font-size: medium;
        }
-    
+       a.test{
+           -webkit-transition-duration:0.1s;
+       }
+    a.test:hover{
+        -webkit-transform:scale(1.2,1.2);
+        color:black;
+    }
 </style>
 </head>
 <img class=" img-rounded img-responsive" src="~/Content/banner.png" alt="" />
@@ -37,17 +43,17 @@
            Head over to the Current Movie page to stay informed about the movie we are currently watching at the club, right now it's<span style="color:red;"> @Model.Film.Title!</span>
            </p>
         }
-        <a class="btn btn-primary btn-large" href="@(Url.Action("Film", "Home", null))">Current Movie &raquo;</a>
+        <a class="test btn btn-primary btn-large" href="@(Url.Action("Film", "Home", null))">Current Movie &raquo;</a>
     </div>
     <div class="col-md-4" style="text-align:center;">
         <h2 style="color:black;">Club Calendar</h2>
         <p>You can head to the club calendar to stay updated on when our meetings are happening and which movies we'll be playing with some extra details!</p>
-        <a class="btn btn-primary btn-large" href="@(Url.Action("Calendar", "Home", null))">Club Calendar &raquo;</a>
+        <a class="test btn btn-primary btn-large" href="@(Url.Action("Calendar", "Home", null))">Club Calendar &raquo;</a>
     </div>
     <div class="col-md-4" style="text-align:center;">
-        <h2 style="color:black;">Movie Discussion</h2>
+        <h2 style="color:black;">Movie Discussion Forum</h2>
         <p>Head to the Discussion Board to give your input on our current film, past films, and several movies to come. It's always cool to see what others have to say!</p>
-        <a class="btn btn-primary btn-large" href="/Forum">Forum &raquo;</a>
+        <a class="test btn btn-primary btn-large" href="/Forum">Forum &raquo;</a>
     </div>
    
 </div>
